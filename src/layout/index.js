@@ -7,13 +7,19 @@ const Layout = ({ pageTitle, children }) => {
       site {
         siteMetadata {
           title
+          social {
+            github
+          }
         }
       }
     }
   `)
   return (
     <>
-      <Header title={data.site.siteMetadata.title} />
+      <Header
+        title={data.site.siteMetadata.title}
+        social={data.site.siteMetadata.social}
+      />
       {children}
     </>
   )

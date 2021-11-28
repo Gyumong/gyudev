@@ -1,9 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `gyudev`,
+    title: `Gyudev`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    social: {
+      github: `https://github.com/Gyumong`, // Your GitHub account
+      medium: ``, // Your Medium account
+      facebook: `hayoung28/`, // Your Facebook account
+      linkedin: `ha-young-choi-1ba15b1b7`, // Your LinkedIn account
+      instagram: `niceha0`,
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
