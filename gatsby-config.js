@@ -25,6 +25,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-remark-autolink-headers`,
     {
       resolve: `gatsby-plugin-emotion`,
       sourceMap: true,
