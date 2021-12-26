@@ -10,18 +10,27 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 `
+const StyleLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+`
+const PostCard = styled.article`
+  width: 100%;
+`
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Container>
         {data.allMdx.nodes.map(node => (
-          <article key={node.id}>
+          <PostCard key={node.id}>
             <h2>
-              <Link to={`/blog/${node.slug}`}>{node.frontmatter.title}</Link>
+              <StyleLink to={`/blog/${node.slug}`}>
+                {node.frontmatter.title}
+              </StyleLink>
             </h2>
             <p>Posted: {node.frontmatter.date}</p>
-          </article>
+          </PostCard>
         ))}
       </Container>
     </Layout>
