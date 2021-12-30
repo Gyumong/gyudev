@@ -22,6 +22,9 @@ const StyledSubMenuBlock = styled.div`
 
 const StyledSubLink = styled(StyledMainLink)`
   color: rgb(180, 180, 180);
+  &:first-child {
+    margin-right: 1rem;
+  }
   &:hover {
     color: rgb(90, 90, 90);
   }
@@ -35,6 +38,9 @@ export const Header = ({ title, social }) => {
       <StyledSubMenuBlock>
         <StyledSubLink to={social?.github} target="_blank">
           Github
+        </StyledSubLink>
+        <StyledSubLink to={social?.tistory} target="_blank">
+          Tistory
         </StyledSubLink>
       </StyledSubMenuBlock>
     </HeaderBlock>

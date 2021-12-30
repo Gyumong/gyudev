@@ -9,6 +9,7 @@ const Layout = ({ pageTitle, children }) => {
           title
           social {
             github
+            tistory
           }
         }
       }

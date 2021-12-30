@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     social: {
       github: `https://github.com/Gyumong`, // Your GitHub account
-      medium: ``, // Your Medium account
+      tistory: `https://rlaalsrb3559.tistory.com/`, // Your Medium account
       facebook: `hayoung28/`, // Your Facebook account
       linkedin: `ha-young-choi-1ba15b1b7`, // Your LinkedIn account
       instagram: `niceha0`,
