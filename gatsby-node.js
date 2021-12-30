@@ -1,12 +1,9 @@
 const path = require("path")
 
-exports.onPostBuild = ({ reporter }) => {
-  reporter.info(`GyuDev site has been built!`)
-}
-
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`src/pages/index.js`)
+  const blogPostTemplate = path.resolve(`./src/layout/blog-page-layout.js`)
+
   const result = await graphql(`
     query {
       allMdx(sort: { fields: frontmatter___date, order: DESC }) {
@@ -20,17 +17,20 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
-    if (result.error) {
-      return Promise.reject(result.error)
-    }
+  `)
 
-    result.data.allMdx.nodes.forEach(({ node }) => {
-      createPage({
-        path: node.slug,
-        compoent: blogPostTemplate,
-        context: {},
-      })
+  if (result.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+  }
+  const posts = result.data.allMdx.nodes
+
+  posts.map(i => console.log("gd"))
+  posts.forEach(node => {
+    const item = JSON.parse(JSON.stringify(node))
+    createPage({
+      path: `/blog/${item.slug}`,
+      component: blogPostTemplate,
+      context: { id: item.id },
     })
   })
 }
