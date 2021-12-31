@@ -1,6 +1,17 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Header } from "../components/header"
+import styled from "@emotion/styled"
+
+const Container = styled.ul`
+  margin: 3rem auto;
+  width: 34.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+  padding-top: 3rem;
+`
+
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -21,7 +32,7 @@ const Layout = ({ pageTitle, children }) => {
         title={data.site.siteMetadata.title}
         social={data.site.siteMetadata.social}
       />
-      {children}
+      <Container>{children}</Container>
     </>
   )
 }

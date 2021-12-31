@@ -19,6 +19,10 @@ const TitleLink = styled(Link)`
 const PostCardBlock = styled.li`
   width: 100%;
   list-style: none;
+  margin-bottom: 5rem;
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
 `
 
 const Date = styled.p`
@@ -31,7 +35,6 @@ const PostCard = ({ data }) => {
       <TitleLink to={`/blog/${data.slug}`} activeStyle={`${palette.indigo[6]}`}>
         {data.frontmatter.title}
       </TitleLink>
-
       <Date>{data.frontmatter.date}</Date>
     </PostCardBlock>
   )
