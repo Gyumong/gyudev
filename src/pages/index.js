@@ -21,6 +21,7 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
+          coverAlt
         }
         id
         slug
