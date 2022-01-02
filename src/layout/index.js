@@ -5,7 +5,7 @@ import styled from "@emotion/styled"
 
 const Container = styled.ul`
   margin: 3rem auto;
-  width: 34.5rem;
+  max-width: 34.5rem;
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem;
