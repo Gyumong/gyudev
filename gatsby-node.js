@@ -2,7 +2,7 @@ const path = require("path")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  const blogPostTemplate = path.resolve(`./src/layout/blog-page-layout.js`)
+  const blogPostTemplate = path.resolve(`./src/layout/blog-page-layout.jsx`)
 
   const result = await graphql(`
     query {
@@ -30,7 +30,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: `/blog/${item.slug}`,
       component: blogPostTemplate,
-      context: { id: item.id },
+      context: {
+        id: item.id,
+      },
     })
   })
 }
