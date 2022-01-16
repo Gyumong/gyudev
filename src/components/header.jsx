@@ -22,7 +22,7 @@ const StyledSubMenuBlock = styled.div`
 
 const StyledSubLink = styled(StyledMainLink)`
   color: rgb(180, 180, 180);
-  &:first-child {
+  &:first-of-type {
     margin-right: 1rem;
   }
   &:hover {
