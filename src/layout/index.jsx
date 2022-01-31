@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Header } from "../components/header"
 import styled from "@emotion/styled"
-
+import SEO from '../components/seo'
 const Container = styled.ul`
   margin: 3rem auto;
   max-width: 34.5rem;
@@ -28,6 +28,7 @@ const Layout = ({ pageTitle, children }) => {
   `)
   return (
     <>
+    <SEO/>
       <Header
         title={data.site.siteMetadata.title}
         social={data.site.siteMetadata.social}

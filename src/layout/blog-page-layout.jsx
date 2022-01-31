@@ -60,6 +60,7 @@ export default function PageTemplate({ data: { mdx } }) {
     <Layout pageTitle={mdx.frontmatter.title}>
       <PostTitle>{mdx.frontmatter.title}</PostTitle>
       <PostDate>{mdx.frontmatter.date}</PostDate>
+      <p>{mdx?.timeToRead}</p>
       <Tags>
         <ul>
           {mdx.frontmatter.tags
@@ -84,6 +85,7 @@ export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
     mdx(id: { eq: $id }) {
       id
+      timeToRead
       frontmatter {
         title
         date(formatString: "YYYY년 M월 D일")

@@ -1,15 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Gyudev`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    description: `안녕하세요 gyumong.dev 입니다.`,
+    author: `gyumong`,
+    siteUrl: `https://www.gyumong.dev/`,
     social: {
       github: `https://github.com/Gyumong`, // Your GitHub account
       tistory: `https://rlaalsrb3559.tistory.com/`, // Your Medium account
-      facebook: `hayoung28/`, // Your Facebook account
-      linkedin: `ha-young-choi-1ba15b1b7`, // Your LinkedIn account
-      instagram: `niceha0`,
     },
   },
   plugins: [
