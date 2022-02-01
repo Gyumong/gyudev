@@ -3,7 +3,7 @@ module.exports = {
     title: `Gyudev`,
     description: `안녕하세요 gyumong.dev 입니다.`,
     author: `gyumong`,
-    siteUrl: `https://www.gyumong.dev/`,
+    siteUrl: `https://www.gyumong.dev`,
     social: {
       github: `https://github.com/Gyumong`, // Your GitHub account
       tistory: `https://rlaalsrb3559.tistory.com/`, // Your Medium account
@@ -36,8 +36,8 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.slug,
+                  url: site.siteMetadata.siteUrl + "/" + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + "/" + edge.node.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
               })
