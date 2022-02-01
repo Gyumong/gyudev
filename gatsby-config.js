@@ -15,6 +15,19 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sitemap",
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.gyumong.dev",
+        sitemap: "https://www.gyumong.dev/sitemap/sitemap-0.xml",
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
