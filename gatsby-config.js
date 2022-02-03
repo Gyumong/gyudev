@@ -89,7 +89,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images`,
+        name: `images`,
+        path: `${__dirname}/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -99,7 +100,8 @@ module.exports = {
       options: {
         maxWidth: 800,
       },
-    }`gatsby-remark-autolink-headers`,
+    },
+    `gatsby-remark-autolink-headers`,
     {
       resolve: `gatsby-plugin-emotion`,
       sourceMap: true,
