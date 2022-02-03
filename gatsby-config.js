@@ -86,9 +86,20 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-remark-autolink-headers`,
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 800,
+      },
+    }`gatsby-remark-autolink-headers`,
     {
       resolve: `gatsby-plugin-emotion`,
       sourceMap: true,

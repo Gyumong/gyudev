@@ -5591,6 +5591,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-selector-parser@npm:^1.0.0":
+  version: 1.4.1
+  resolution: "css-selector-parser@npm:1.4.1"
+  checksum: 31948754e579eedb918c2fb2d5a4c643ec769ff4a0d03a7bd10b43b25d44973f8cbe86d7ec00c4494269f7ff38b3d2ab0f6ea801cece0ef0974e74469dff770c
+  languageName: node
+  linkType: hard
+
 "css-tree@npm:1.0.0-alpha.37":
   version: 1.0.0-alpha.37
   resolution: "css-tree@npm:1.0.0-alpha.37"
@@ -7689,6 +7696,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-core-utils@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "gatsby-core-utils@npm:3.6.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    ci-info: 2.0.0
+    configstore: ^5.0.1
+    file-type: ^16.5.3
+    fs-extra: ^10.0.0
+    got: ^11.8.3
+    lock: ^1.1.0
+    node-object-hash: ^2.3.10
+    proper-lockfile: ^4.1.2
+    tmp: ^0.2.1
+    xdg-basedir: ^4.0.0
+  checksum: 01d6daf7839f58e1e26dd7b6b27e7a16540de1b7ef5da43c78c9b517ef0204a5b41180c9ea901946f4310a93e4c2b3df4f145e7e3d938c9c046798250c1052cc
+  languageName: node
+  linkType: hard
+
 "gatsby-graphiql-explorer@npm:^2.0.0":
   version: 2.0.0
   resolution: "gatsby-graphiql-explorer@npm:2.0.0"
@@ -8132,6 +8158,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-remark-images@npm:^6.6.0":
+  version: 6.6.0
+  resolution: "gatsby-remark-images@npm:6.6.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    chalk: ^4.1.2
+    cheerio: ^1.0.0-rc.10
+    gatsby-core-utils: ^3.6.0
+    is-relative-url: ^3.0.0
+    lodash: ^4.17.21
+    mdast-util-definitions: ^4.0.0
+    potrace: ^2.1.8
+    query-string: ^6.14.1
+    unist-util-select: ^3.0.4
+    unist-util-visit-parents: ^3.1.1
+  peerDependencies:
+    gatsby: ^4.0.0-next
+    gatsby-plugin-sharp: ^4.0.0-next
+  checksum: 367520e4cae3d6ed9527c56a4ff9418bce1a2d3842648b0cd31434da9d77d4e64fe359d51cbd8e614c552e81059df2d4033b2f187da1c87bd000026759480dac
+  languageName: node
+  linkType: hard
+
 "gatsby-source-filesystem@npm:^4.0.0":
   version: 4.0.0
   resolution: "gatsby-source-filesystem@npm:4.0.0"
@@ -8176,6 +8224,7 @@ __metadata:
     gatsby-plugin-sharp: ^4.0.1
     gatsby-plugin-sitemap: ^5.6.0
     gatsby-remark-autolink-headers: ^5.4.0
+    gatsby-remark-images: ^6.6.0
     gatsby-source-filesystem: ^4.0.0
     gatsby-transformer-sharp: ^4.0.0
     lodash.kebabcase: ^4.1.1
@@ -12434,6 +12483,13 @@ __metadata:
   version: 6.1.0
   resolution: "normalize-url@npm:6.1.0"
   checksum: 4a4944631173e7d521d6b80e4c85ccaeceb2870f315584fa30121f505a6dfd86439c5e3fdd8cd9e0e291290c41d0c3599f0cb12ab356722ed242584c30348e50
+  languageName: node
+  linkType: hard
+
+"not@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "not@npm:0.1.0"
+  checksum: 8043bb53bc1c465a4a4f751394f11aad1d8ccae08dd2123310c6a5d160a5ad4138706d50af905cf114b72507a328585d4f2a73cd3d6730981dd2675aa9c8436f
   languageName: node
   linkType: hard
 
@@ -16882,6 +16938,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"unist-util-select@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "unist-util-select@npm:3.0.4"
+  dependencies:
+    css-selector-parser: ^1.0.0
+    not: ^0.1.0
+    nth-check: ^2.0.0
+    unist-util-is: ^4.0.0
+    zwitch: ^1.0.0
+  checksum: e6bdb4c79037e7d398a7682e3a2fb461e4b9ea8305e2228f54c47a3a27759e0bfc9f31eee763c31978b337d55f4a2216b974d3b7fcba058b1267ca1fc1e3ccfb
+  languageName: node
+  linkType: hard
+
 "unist-util-stringify-position@npm:^1.0.0, unist-util-stringify-position@npm:^1.1.1":
   version: 1.1.2
   resolution: "unist-util-stringify-position@npm:1.1.2"
@@ -16923,7 +16992,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit-parents@npm:^3.0.0":
+"unist-util-visit-parents@npm:^3.0.0, unist-util-visit-parents@npm:^3.1.1":
   version: 3.1.1
   resolution: "unist-util-visit-parents@npm:3.1.1"
   dependencies:
