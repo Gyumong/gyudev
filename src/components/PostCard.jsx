@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import palette from "../styles/palette"
+
 const TitleLink = styled(Link)`
   text-decoration: none;
   h1 {
@@ -33,32 +34,40 @@ const StyledCoverAlt = styled.p`
   -webkit-line-clamp: 2;
 `
 
-const Date = styled.p`
-  color: ${palette.gray[6]};
+const Date = styled.span`
+  color: ${palette.gray[8]};
+  margin-right:0.3125rem;
 `
-
+const Tag = styled.span`
+  color :${palette.pink[0]};
+`;
 const HeadLine = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin-top:0.25rem;
   margin-bottom: 0.75rem;
-`;
+  `;
 
 const ReadMore = styled.p`
   color: ${palette.gray[6]};
   margin:0;
-`;
+  `;
+
 
 const PostCard = ({ data }) => {
   return (
     <PostCardBlock key={data.id}>
-      <TitleLink to={`/blog/${data.slug}`} activeStyle={`${palette.indigo[6]}`}>
+      <TitleLink to={`/blog/${data.slug}`} title={data.frontmatter.title} activeStyle={{color:`${palette.indigo[6]}`}}>
+        <div>
+        <Date>{data.frontmatter.date}</Date>
+        <Tag>{data.frontmatter.tags[0]}</Tag>
+        </div>
         <HeadLine>
         <h1>{data.frontmatter.title}</h1>
         <ReadMore>{data.timeToRead}min</ReadMore>
         </HeadLine>
         <StyledCoverAlt>{data.frontmatter.coverAlt}</StyledCoverAlt>
-        <Date>{data.frontmatter.date}</Date>
       </TitleLink>
     </PostCardBlock>
   )

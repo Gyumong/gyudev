@@ -10,6 +10,7 @@ const IndexPage = ({ data }) => {
     []
   )
 
+  console.log("aazz", tags)
   return (
     <Layout>
       {data.allMdx.nodes.map(node => (
