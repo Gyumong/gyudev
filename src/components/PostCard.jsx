@@ -21,7 +21,7 @@ const TitleLink = styled(Link)`
 const PostCardBlock = styled.li`
   width: 100%;
   list-style: none;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   &:not(:last-child) {
     margin-bottom: 4em;
   }

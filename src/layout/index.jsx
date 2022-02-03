@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { Header } from "../components/header"
 import styled from "@emotion/styled"
 import SEO from '../components/seo'
+import Footer from '../components/footer'
 const Container = styled.ul`
   margin: 2.5rem auto;
   max-width: 45rem;
@@ -34,6 +35,7 @@ const Layout = ({ pageTitle, children }) => {
         social={data.site.siteMetadata.social}
       />
       <Container>{children}</Container>
+      <Footer/>
     </>
   )
 }
