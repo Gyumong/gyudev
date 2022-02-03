@@ -7442,13 +7442,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fontsource-noto-sans-kr@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "fontsource-noto-sans-kr@npm:4.0.0"
-  checksum: e6368ac0036382b9ec5a5424a94e17f119eebc72bfba37dc26ba2a2f1a26f57afb7441b55ab9e8042ce18cb297b7cc09adb0b9283d752401491e32bf9547a557
-  languageName: node
-  linkType: hard
-
 "for-in@npm:^1.0.2":
   version: 1.0.2
   resolution: "for-in@npm:1.0.2"
@@ -8170,7 +8163,6 @@ __metadata:
     "@emotion/styled": ^11.6.0
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
-    fontsource-noto-sans-kr: ^4.0.0
     gatsby: ^4.0.2
     gatsby-plugin-emotion: ^7.1.0
     gatsby-plugin-feed: ^4.6.0
