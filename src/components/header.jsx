@@ -36,10 +36,10 @@ export const Header = ({ title, social }) => {
     <HeaderBlock>
       <StyledMainLink to={`/`}>{title}</StyledMainLink>
       <StyledSubMenuBlock>
-        <StyledSubLink to={social?.github} target="_blank">
+        <StyledSubLink to={social?.github} rel="noopener" target="_blank">
           Github
         </StyledSubLink>
-        <StyledSubLink to={social?.tistory} target="_blank">
+        <StyledSubLink to={social?.tistory} rel="noopener" target="_blank">
           Tistory
         </StyledSubLink>
       </StyledSubMenuBlock>

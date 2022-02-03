@@ -1,16 +1,9 @@
-import React, { useMemo } from "react"
-import Layout from "../layout"
 import { graphql } from "gatsby"
+import React from "react"
 import PostCard from "../components/PostCard"
-import uniq from "lodash.uniq"
+import Layout from "../layout"
 
 const IndexPage = ({ data }) => {
-  const tags = useMemo(
-    () => uniq(data?.allMdx?.nodes.map(node => node?.frontmatter?.tags)),
-    []
-  )
-
-  console.log("aazz", tags)
   return (
     <Layout>
       {data.allMdx.nodes.map(node => (
