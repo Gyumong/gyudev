@@ -57,6 +57,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-transformer-sharp", "virtual:84c032af55cd4f9babf8db692292633aff00e2f68404beff67de9f7c9cd186f75ede955d237efe6d9cc7b184678d07f18ad56aa70680cd8c62a803875851f125#npm:4.0.0"],
             ["lodash.kebabcase", "npm:4.1.1"],
             ["lodash.uniq", "npm:4.5.0"],
+            ["pretendard", "npm:1.2.1"],
             ["prettier", "npm:2.4.1"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
@@ -4679,6 +4680,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-cors-npm-2.8.12-ff52e8e514-8c45f112c7.zip/node_modules/@types/cors/",
           "packageDependencies": [
             ["@types/cors", "npm:2.8.12"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/css-tree", [
+        ["npm:1.0.7", {
+          "packageLocation": "./.yarn/cache/@types-css-tree-npm-1.0.7-d461496928-65aa89e5c8.zip/node_modules/@types/css-tree/",
+          "packageDependencies": [
+            ["@types/css-tree", "npm:1.0.7"]
           ],
           "linkType": "HARD",
         }]
@@ -10326,6 +10336,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["font-range", [
+        ["npm:0.2.0", {
+          "packageLocation": "./.yarn/cache/font-range-npm-0.2.0-6ed9f9f2bb-f68aba5354.zip/node_modules/font-range/",
+          "packageDependencies": [
+            ["font-range", "npm:0.2.0"],
+            ["@types/css-tree", "npm:1.0.7"],
+            ["@types/node-fetch", "npm:2.5.12"],
+            ["css-tree", "npm:1.1.3"],
+            ["node-fetch", "npm:2.6.1"],
+            ["tslib", "npm:2.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["fontsource-noto-sans-kr", [
         ["npm:4.0.0", {
           "packageLocation": "./.yarn/cache/fontsource-noto-sans-kr-npm-4.0.0-59a90681eb-e6368ac003.zip/node_modules/fontsource-noto-sans-kr/",
@@ -11595,6 +11619,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gatsby-transformer-sharp", "virtual:84c032af55cd4f9babf8db692292633aff00e2f68404beff67de9f7c9cd186f75ede955d237efe6d9cc7b184678d07f18ad56aa70680cd8c62a803875851f125#npm:4.0.0"],
             ["lodash.kebabcase", "npm:4.1.1"],
             ["lodash.uniq", "npm:4.5.0"],
+            ["pretendard", "npm:1.2.1"],
             ["prettier", "npm:2.4.1"],
             ["prop-types", "npm:15.7.2"],
             ["react", "npm:17.0.2"],
@@ -18085,6 +18110,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/prepend-http-npm-2.0.0-e1fc4332f2-7694a95254.zip/node_modules/prepend-http/",
           "packageDependencies": [
             ["prepend-http", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["pretendard", [
+        ["npm:1.2.1", {
+          "packageLocation": "./.yarn/unplugged/pretendard-npm-1.2.1-126df67a1c/node_modules/pretendard/",
+          "packageDependencies": [
+            ["pretendard", "npm:1.2.1"],
+            ["font-range", "npm:0.2.0"]
           ],
           "linkType": "HARD",
         }]
