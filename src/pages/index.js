@@ -1,5 +1,4 @@
 import React, { useMemo } from "react"
-import kebabCase from "lodash.kebabcase"
 import Layout from "../layout"
 import { graphql } from "gatsby"
 import PostCard from "../components/PostCard"
@@ -10,8 +9,6 @@ const IndexPage = ({ data }) => {
     () => uniq(data?.allMdx?.nodes.map(node => node?.frontmatter?.tags)),
     []
   )
-
-  console.log("오하요", tags)
 
   return (
     <Layout>

@@ -20,6 +20,8 @@ const PostDate = styled.p`
   line-height: 1.6;
 `
 
+const ReadMore = styled(PostDate)``
+
 const Tags = styled.div`
   ul {
     margin-top: 0.7rem;
@@ -33,10 +35,10 @@ const Tags = styled.div`
       text-align: center;
       a {
         display: block;
-        padding-left: 0.8rem;
-        padding-right: 0.8rem;
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
         text-decoration: none;
         color: black;
         font-size: 0.85rem;
@@ -60,7 +62,7 @@ export default function PageTemplate({ data: { mdx } }) {
     <Layout pageTitle={mdx.frontmatter.title}>
       <PostTitle>{mdx.frontmatter.title}</PostTitle>
       <PostDate>{mdx.frontmatter.date}</PostDate>
-      <p>{mdx?.timeToRead}</p>
+      <ReadMore>읽는데 {mdx?.timeToRead}분...!</ReadMore>
       <Tags>
         <ul>
           {mdx.frontmatter.tags

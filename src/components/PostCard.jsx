@@ -6,7 +6,7 @@ const TitleLink = styled(Link)`
   text-decoration: none;
   h1 {
     margin: 0;
-    font-size: 2.375rem;
+    font-size: 1.75rem;
     font-weight: 700;
     line-height: 1.4;
     word-break: keep-all;
@@ -20,9 +20,9 @@ const TitleLink = styled(Link)`
 const PostCardBlock = styled.li`
   width: 100%;
   list-style: none;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   &:not(:last-child) {
-    margin-bottom: 1em;
+    margin-bottom: 4em;
   }
 `
 const StyledCoverAlt = styled.p`
@@ -40,11 +40,13 @@ const Date = styled.p`
 const HeadLine = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 0.75rem;
 `;
 
 const ReadMore = styled.p`
   color: ${palette.gray[6]};
+  margin:0;
 `;
 
 const PostCard = ({ data }) => {

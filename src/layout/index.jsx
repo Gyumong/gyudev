@@ -4,8 +4,8 @@ import { Header } from "../components/header"
 import styled from "@emotion/styled"
 import SEO from '../components/seo'
 const Container = styled.ul`
-  margin: 3rem auto;
-  max-width: 34.5rem;
+  margin: 2.5rem auto;
+  max-width: 45rem;
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem;
