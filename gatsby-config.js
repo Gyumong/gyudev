@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Gyudev`,
-    description: `안녕하세요 새로운 걸 좋아하는 FE개발자 김민규입니다.`,
+    description: `안녕하세요 개발자 김민규입니다.`,
     author: `gyumong`,
     siteUrl: `https://www.gyumong.dev`,
     social: {
