@@ -4,13 +4,17 @@ import React from "react"
 import Footer from '../components/footer'
 import { Header } from "../components/header"
 import SEO from '../components/seo'
-const Container = styled.ul`
-  margin: 2.5rem auto;
-  max-width: 45rem;
+
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 1.5rem;
-  padding-top: 3rem;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 24px;`;
+
+const Container = styled.div`
+  margin-top :8rem;
 `
 
 const Layout = ({ children }) => {
@@ -28,7 +32,7 @@ const Layout = ({ children }) => {
     }
   `)
   return (
-    <>
+    <Wrapper>
     <SEO/>
       <Header
         title={data.site.siteMetadata.title}
@@ -36,7 +40,7 @@ const Layout = ({ children }) => {
       />
       <Container>{children}</Container>
       <Footer/>
-    </>
+    </Wrapper>
   )
 }
 export default Layout

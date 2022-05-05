@@ -8,6 +8,15 @@ import Utterances from "../components/Utterances"
 import styled from "@emotion/styled"
 import kebabCase from "lodash.kebabcase"
 import palette from "../styles/palette"
+import {
+  Headline26,
+  Headline24,
+  Headline22,
+  Headline20,
+  Headline18,
+  Headline16,
+  Contents1,
+} from "../styles/typography"
 
 const PostTitle = styled.h1`
   margin: 0;
@@ -55,8 +64,16 @@ const Tags = styled.div`
     }
   }
 `
-
-const shortcodes = { Link } // Provide common components here
+const shortcodes = {
+  Headline26,
+  Headline24,
+  Headline22,
+  Headline20,
+  Headline18,
+  Headline16,
+  Contents1,
+}
+// Provide common components here
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <Layout pageTitle={mdx.frontmatter.title}>
@@ -75,7 +92,16 @@ export default function PageTemplate({ data: { mdx } }) {
         </ul>
       </Tags>
 
-      <MDXProvider components={shortcodes}>
+      <MDXProvider
+        components={{
+          h1: Headline26,
+          h2: Headline24,
+          h3: Headline22,
+          h4: Headline20,
+          h5: Headline18,
+          p: Contents1,
+        }}
+      >
         <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
       </MDXProvider>
       <Utterances repo="Gyumong/gyudev" theme="github-light" />
