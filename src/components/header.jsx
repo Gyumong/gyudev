@@ -3,11 +3,22 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 
 const HeaderBlock = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 42px;
+  height: 60px;
+  z-index: 1000;
   display: flex;
-  padding: 1rem 3rem;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   align-items: center;
   justify-content: space-between;
+  background-color: hsla(0, 0%, 100%, 0.8);
+
+  @media screen and (max-width: 720px) {
+    padding: 0 24px;
+  }
 `
 const StyledMainLink = styled(Link)`
   box-shadow: none;
