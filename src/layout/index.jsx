@@ -14,7 +14,10 @@ const Wrapper = styled.div`
   padding: 24px;`;
 
 const Container = styled.div`
-  margin-top :8rem;
+  margin-top :7rem;
+  @media screen and (max-width: 720px) {
+    margin-top: 5.5rem;
+  }
 `
 
 const Layout = ({ children }) => {
