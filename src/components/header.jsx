@@ -15,6 +15,7 @@ const HeaderBlock = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: hsla(0, 0%, 100%, 0.8);
+  backdrop-filter: blur(8px);
 
   @media screen and (max-width: 720px) {
     padding: 0 24px;
