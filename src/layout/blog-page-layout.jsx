@@ -64,15 +64,7 @@ const Tags = styled.div`
     }
   }
 `
-const shortcodes = {
-  Headline26,
-  Headline24,
-  Headline22,
-  Headline20,
-  Headline18,
-  Headline16,
-  Contents1,
-}
+
 // Provide common components here
 export default function PageTemplate({ data: { mdx } }) {
   return (
@@ -100,6 +92,7 @@ export default function PageTemplate({ data: { mdx } }) {
           h4: Headline20,
           h5: Headline18,
           p: Contents1,
+          li: Contents1,
         }}
       >
         <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
@@ -118,6 +111,9 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY년 M월 D일")
         tags
+        featuredImage {
+          publicURL
+        }
       }
       body
     }

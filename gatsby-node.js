@@ -1,18 +1,23 @@
 const path = require("path")
 const kebabCase = require(`lodash.kebabcase`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+
   const blogPostTemplate = path.resolve(`./src/layout/blog-page-layout.jsx`)
 
   const result = await graphql(`
-    query {
+    {
       allMdx(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
           frontmatter {
             date(formatString: "MMMM D, YYYY")
             title
             tags
+            featuredImage {
+              publicURL
+            }
           }
           id
           slug

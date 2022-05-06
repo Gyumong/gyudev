@@ -27,6 +27,9 @@ export const query = graphql`
           title
           date(formatString: "MMMM DD, YYYY")
           coverAlt
+          featuredImage {
+            publicURL
+          }
         }
         id
         body

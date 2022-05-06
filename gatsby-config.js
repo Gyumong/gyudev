@@ -12,8 +12,35 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    "gatsby-plugin-mdx",
     "gatsby-plugin-sitemap",
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-transformer-remark`,
+    // {
+    //   resolve: "gatsby-plugin-mdx",
+    //   options: {
+    //     gatsbyRemarkPlugins: [
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           maxWidth: 800,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -86,19 +113,11 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `images`,
-    //     path: `${__dirname}/images`,
-    //   },
-    // },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-remark-images`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        maxWidth: 800,
+        name: "images",
+        path: `${__dirname}/images`,
       },
     },
     `gatsby-remark-autolink-headers`,

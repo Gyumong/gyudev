@@ -25,6 +25,9 @@ export const query = graphql`
           title
           coverAlt
           tags
+          featuredImage {
+            publicURL
+          }
         }
         id
         slug
