@@ -22,6 +22,7 @@ const HeaderBlock = styled.div`
   }
 `
 const StyledMainLink = styled(Link)`
+  font-weight: 700 ;
   box-shadow: none;
   text-decoration: none;
   color: inherit;
